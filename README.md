@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# React Chessboard with Custom "Archer" Piece
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React-based web application that implements a functional chessboard. The chessboard allows users to visualize and simulate the movement of standard chess pieces—Pawn, Rook, Knight, Bishop, Queen, and King—as well as a custom piece called the "Archer." The Archer alternates its movement pattern between a Bishop and a Rook on each turn.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Responsive 8x8 Chessboard**: A visually appealing, responsive chessboard with clear differentiation between white and black squares.
+- **Standard Chess Piece Movements**: Implements the correct movement logic for all standard chess pieces.
+- **Custom Archer Piece**: A unique chess piece that alternates its movement between Bishop and Rook with each move.
+- **Turn-Based Logic**: Proper turn tracking to ensure that each player moves only on their turn and that the Archer's movement alternates correctly.
+- **Piece Highlighting**: Highlights valid moves for the selected piece.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: For building the user interface.
+- **Styled Components**: For styling the chessboard and pieces.
+- **JavaScript**: For implementing the logic of the chess pieces' movements.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js
+- npm (Node Package Manager)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the Repository**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/yourusername/react-chessboard.git
+   cd react-chessboard
 
-### `npm run eject`
+2. **Install Dependencies**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm install
+3. **Start the Application**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+-  **The app should now be running on http://localhost:3000.**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
+- src/: Contains all the source code.
+- Contains React components, including Chessboard.js and Piece.js.
+- Contains styled components for the board and squares.
+- Contains utility functions for piece movements in pieceMovement.js.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## How to Play
+- **Select a Piece:** Click on a chess piece to view its possible moves. The valid squares will be highlighted.
+- **Move a Piece:** Click on a highlighted square to move the selected piece to that position.
+- **Turn-Based Play:** The game tracks whose turn it is and restricts movement to the current player.
+- **Custom Archer Piece:** The Archer piece alternates its movement pattern between a Bishop and a Rook on each turn.
+- **Custom Piece - Archer
+First Turn:** Moves like a Bishop (any number of squares diagonally).
+- **Second Turn:** Moves like a Rook (any number of squares horizontally or vertically).
+- **Subsequent Turns:** Continues alternating between Bishop and Rook movements.
